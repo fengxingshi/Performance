@@ -23,7 +23,7 @@ namespace DoubanFM.Services
         public async Task<T> GetDataAsync(string url)
         {
             httpClient = new HttpClient();
-
+            
             var headers = httpClient.DefaultRequestHeaders;//获取每个请求标头的集合
             headers.UserAgent.ParseAdd("ie");
             headers.UserAgent.ParseAdd("Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
