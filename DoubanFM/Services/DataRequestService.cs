@@ -35,6 +35,7 @@ namespace DoubanFM.Services
                 response = await httpClient.GetAsync(new Uri(url));
                 response.EnsureSuccessStatusCode();
                 string responseText = await response.Content.ReadAsStringAsync();
+                
                 return JsonConvert.DeserializeObject<T>(responseText);
 
             }

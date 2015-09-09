@@ -9,17 +9,18 @@ using System.ComponentModel;
 using DoubanFM.Commands;
 using System.Windows.Input;
 using DoubanFM.Navigations;
+using Hebcz.ASP.Application.Performance.DataObjects;
 
 namespace DoubanFM.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        private readonly IChannelService _channelService;
+        private readonly IDeptService _deptService;
 
-        public MainPageViewModel(IChannelService channelService, NavigationService navigation)
+        public MainPageViewModel(IDeptService deptService, NavigationService navigation)
         {
-            this._channelService = channelService;
-            LoadChannels();
+            this._deptService = deptService;
+            LoadDepts();
             ItemClickCommand = new RelayCommand<object>((e) =>
             {
                 var parameter = e as Channel;
@@ -27,24 +28,24 @@ namespace DoubanFM.ViewModels
             });
         }
 
-        private Channels channels;
+        private Depts depts;
 
-        public Channels Channels
+        public Depts Depts
         {
-            get { return channels; }
+            get { return depts; }
             set
             {
-                channels = value;
-                OnPropertyChanged(nameof(Channels));
+                depts = value;
+                OnPropertyChanged(nameof(Depts));
             }
         }
 
         public ICommand ItemClickCommand { get; set; }
 
-        private async void LoadChannels()
+        private async void LoadDepts()
         {
-            var result = await _channelService.GetChannelAsync();
-            this.Channels = result;
+            var result = await _deptService.GetDeptAsync();
+            this.Depts = result;
         }
     }
 }

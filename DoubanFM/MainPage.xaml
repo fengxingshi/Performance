@@ -11,7 +11,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <GridView ItemsSource="{Binding Channels.ChannelList}" Margin="10" IsItemClickEnabled="True" behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
+        <GridView ItemsSource="{Binding Depts.DeptList}" Margin="10" IsItemClickEnabled="True" behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
             <GridView.Header>
                 <TextBlock HorizontalAlignment="Center" Text="豆瓣FM" />
             </GridView.Header>
