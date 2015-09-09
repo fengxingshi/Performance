@@ -39,49 +39,49 @@ using System;
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static int AddPartsFromAssembly(Assembly assembly)
          { 
              return Default.AddPartsFromAssembly(assembly); 
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static void RemovePart<T>(string name = null)
          { 
              Default.RemovePart<T>(name); 
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static T GetPart<T>(string name = null)
          { 
              return Default.GetPart<T>(name); 
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static IList<T> GetParts<T>()
          { 
              return Default.GetParts<T>(); 
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static void SatisfyImports<T>(this T obj)
          { 
              Default.SatisfyImports(obj); 
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static void BuildCache<T>()
          { 
              Default.BuildCache<T>(); 
          } 
  
 
-         [Obsolete("Use method on Default property instead. 6/4/2014")] 
+         [Obsolete("Use method on Default property instead. 9/9/2015")] 
          public static void Clear()
          { 
              Default.Clear(); 
