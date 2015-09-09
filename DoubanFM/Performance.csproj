@@ -7,8 +7,8 @@
     <ProjectGuid>{F9D2FB0E-F282-4314-BDCE-F4F81129E564}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DoubanFM</RootNamespace>
-    <AssemblyName>DoubanFM</AssemblyName>
+    <RootNamespace>Performance</RootNamespace>
+    <AssemblyName>Performance</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -161,6 +161,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PlayListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProgressPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
