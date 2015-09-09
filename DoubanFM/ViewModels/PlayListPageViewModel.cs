@@ -1,6 +1,6 @@
-﻿using DoubanFM.Commands;
-using DoubanFM.Models;
-using DoubanFM.Services;
+﻿using Performance.Commands;
+using Performance.Models;
+using Performance.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DoubanFM.ViewModels
+namespace Performance.ViewModels
 {
     public class PlayListPageViewModel : ViewModelBase
     {

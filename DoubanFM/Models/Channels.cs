@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace DoubanFM.Models
+namespace Performance.Models
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class Channel

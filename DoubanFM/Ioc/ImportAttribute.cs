@@ -10,7 +10,7 @@
 using System; 
  
 
- namespace DoubanFM.Ioc
+ namespace Performance.Ioc
  { 
      /// <summary>Marks a property to import another object. </summary> 
      [AttributeUsage(AttributeTargets.Property)] 

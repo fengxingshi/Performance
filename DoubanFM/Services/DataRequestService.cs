@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Web.Http;
 
-namespace DoubanFM.Services
+namespace Performance.Services
 {
     public class DataRequestService<T> : IDataRequestService<T>
     {

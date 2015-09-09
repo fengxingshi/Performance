@@ -9,7 +9,7 @@
 
 using System; 
  
- namespace DoubanFM.Ioc
+ namespace Performance.Ioc
  { 
      /// <summary>Marks a class as exported part. </summary> 
      [AttributeUsage(AttributeTargets.Class)] 

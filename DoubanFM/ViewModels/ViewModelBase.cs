@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoubanFM.ViewModels
+namespace Performance.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

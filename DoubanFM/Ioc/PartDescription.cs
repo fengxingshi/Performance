@@ -12,7 +12,7 @@ using System.Linq;
 using System.Reflection; 
 
 
-namespace DoubanFM.Ioc
+namespace Performance.Ioc
 { 
     internal class PartDescription
     { 

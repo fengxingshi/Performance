@@ -1,11 +1,11 @@
-﻿using DoubanFM.Models;
+﻿using Performance.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoubanFM.Services
+namespace Performance.Services
 {
     public interface IChannelService
     {

@@ -7,7 +7,7 @@
 //----------------------------------------------------------------------- 
 
 
-namespace DoubanFM.Ioc
+namespace Performance.Ioc
  { 
      /// <summary>The interface for a service locator. </summary> 
      public interface IServiceLocator

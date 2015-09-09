@@ -1,4 +1,4 @@
-﻿using DoubanFM.ViewModels;
+﻿using Performance.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 //“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
 
-namespace DoubanFM
+namespace Performance
 {
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。

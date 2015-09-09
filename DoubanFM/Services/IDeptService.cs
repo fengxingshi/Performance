@@ -1,12 +1,12 @@
-﻿using DoubanFM.Models;
+﻿using Performance.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hebcz.ASP.Application.Performance.DataObjects;
+using Performance.DataObjects;
 
-namespace DoubanFM.Services
+namespace Performance.Services
 {
     public interface IDeptService
     {

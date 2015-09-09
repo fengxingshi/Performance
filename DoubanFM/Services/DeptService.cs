@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DoubanFM.Models;
-using DoubanFM.APIs;
-using Hebcz.ASP.Application.Performance.DataObjects;
+using Performance.Models;
+using Performance.APIs;
+using Performance.DataObjects;
 using Windows.Web.Http;
 
-namespace DoubanFM.Services
+namespace Performance.Services
 {
     public class DeptService : DataRequestService<Depts>, IDeptService
     {

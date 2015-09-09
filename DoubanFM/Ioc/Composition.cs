@@ -12,7 +12,7 @@ using System;
  using System.Reflection; 
  
 
- namespace DoubanFM.Ioc
+ namespace Performance.Ioc
  { 
      /// <summary>Provides access to a singleton <see cref="ICompositionContext"/> object. </summary> 
      public static class Composition

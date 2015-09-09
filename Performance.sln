@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubanFM", "DoubanFM\DoubanFM.csproj", "{F9D2FB0E-F282-4314-BDCE-F4F81129E564}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Performance", "DoubanFM\Performance.csproj", "{F9D2FB0E-F282-4314-BDCE-F4F81129E564}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

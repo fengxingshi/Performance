@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DoubanFM.Models;
-using DoubanFM.Services;
+using Performance.Models;
+using Performance.Services;
 using System.ComponentModel;
-using DoubanFM.Commands;
+using Performance.Commands;
 using System.Windows.Input;
-using DoubanFM.Navigations;
-using Hebcz.ASP.Application.Performance.DataObjects;
+using Performance.Navigations;
+using Performance.DataObjects;
 
-namespace DoubanFM.ViewModels
+namespace Performance.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {

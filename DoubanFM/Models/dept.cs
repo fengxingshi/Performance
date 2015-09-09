@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hebcz.ASP.Application.Performance.DataObjects
+namespace Performance.DataObjects
 {
     public class Dept
     {
@@ -126,7 +126,7 @@ namespace Hebcz.ASP.Application.Performance.DataObjects
     [JsonObject(MemberSerialization.OptIn)]
     public class Depts
     {
-        [JsonProperty("depts")]
+        [JsonProperty("DeptList")]
         public IEnumerable<Dept> DeptList { get; set; }
     }
 }

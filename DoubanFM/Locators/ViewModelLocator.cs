@@ -1,13 +1,13 @@
-﻿using DoubanFM.Ioc;
-using DoubanFM.Services;
-using DoubanFM.ViewModels;
+﻿using Performance.Ioc;
+using Performance.Services;
+using Performance.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoubanFM.Locators
+namespace Performance.Locators
 {
     public class ViewModelLocator
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DoubanFM.Models;
-using DoubanFM.APIs;
+using Performance.Models;
+using Performance.APIs;
 
-namespace DoubanFM.Services
+namespace Performance.Services
 {
     public class ChannelService : DataRequestService<Channels>, IChannelService
     {

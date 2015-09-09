@@ -15,7 +15,7 @@ using System.Linq;
 using System.Reflection; 
 
 
-namespace DoubanFM.Ioc
+namespace Performance.Ioc
 { 
     /// <summary>Provides the ability to store, retrieve and assemble parts.</summary> 
     public class CompositionContext : ICompositionContext 

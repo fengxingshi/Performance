@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Data;
 
-namespace DoubanFM.Converters
+namespace Performance.Converters
 {
     public class SecondMinuteConverter : IValueConverter
     {

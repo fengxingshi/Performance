@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Reflection; 
 
 
-namespace DoubanFM.Ioc
+namespace Performance.Ioc
 { 
     /// <summary>Provides the ability to store, retrieve and assemble parts. </summary> 
     public interface ICompositionContext
