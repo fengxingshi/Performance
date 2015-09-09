@@ -135,6 +135,9 @@
     <Compile Include="Views\PlayListPage.xaml.cs">
       <DependentUpon>PlayListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProgressPage.xaml.cs">
+      <DependentUpon>ProgressPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
