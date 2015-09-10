@@ -5,9 +5,40 @@
     xmlns:local="using:Performance.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding ProgressList,Source={StaticResource Locator}}"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding DeptProgresses.DeptProgressList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,10">
+                        <StackPanel Orientation="Horizontal">
+                            <!--<Image Source="{Binding Picture}" Width="64" />-->
+                            <StackPanel VerticalAlignment="Center" Margin="10,0">
+                                <TextBlock Text="{Binding SencondName}" FontWeight="Bold" Margin="0,5" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>
+                                        <Run Text="指标承担人:" />
+                                        <Run Text="{Binding assignerName}" />
+                                    </TextBlock>
+                                    <TextBlock Margin="20,0,0,0">
+                                        <Run Text="当前进度:" />
+                                        <Run Text="{Binding NowProgress}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Image x:Name="image" HorizontalAlignment="Left" Width="55" Height="35" VerticalAlignment="Top"/>
     </Grid>
+
 </Page>

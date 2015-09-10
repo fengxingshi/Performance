@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Performance.Models;
+﻿using Performance.Models;
 using Performance.Services;
-using System.ComponentModel;
 using Performance.Commands;
 using System.Windows.Input;
 using Performance.Navigations;
-using Performance.DataObjects;
 
 namespace Performance.ViewModels
 {
@@ -23,8 +16,8 @@ namespace Performance.ViewModels
             LoadDepts();
             ItemClickCommand = new RelayCommand<object>((e) =>
             {
-                var parameter = e as Channel;
-                navigation.Navigate<Views.PlayListPage>(parameter.ChannelId);
+                var parameter = e as Dept;
+                navigation.Navigate<Views.ProgressPage>(parameter.DepartmentID);
             });
         }
 

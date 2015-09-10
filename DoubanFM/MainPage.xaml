@@ -10,16 +10,17 @@
     DataContext="{Binding Main,Source={StaticResource Locator}}"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+    <Grid Background="AliceBlue">
         <GridView ItemsSource="{Binding Depts.DeptList}" Margin="10" IsItemClickEnabled="True" behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
             <GridView.Header>
-                <TextBlock HorizontalAlignment="Center" Text="豆瓣FM" />
+                <TextBlock HorizontalAlignment="Center" Text="处室" />
             </GridView.Header>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="5" Background="Green" Width="120" Height="120">
-                        <Border Background="Black" Width="120" Height="30" VerticalAlignment="Bottom">
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Name}" Foreground="#FFFFFF" />
+                    <Border Margin="5" Background="#0066ff" Width="120" Height="120">
+                        <Border Background="#66c9f2" Width="120" Height="30" VerticalAlignment="Bottom">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Name}" Foreground="Black" />
                         </Border>
                     </Border>
                 </DataTemplate>

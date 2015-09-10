@@ -8,7 +8,7 @@ namespace Performance.APIs
 {
     public class WebAPI
     {
-        //string url = "http://localhost:42535";
+        //string url = "http://localhost:42535/api/";
         public static string GetChannels()
         { return "http://www.douban.com/j/app/radio/channels";
         }
@@ -19,6 +19,11 @@ namespace Performance.APIs
         public static string GetDept(string orgId)
         {
             return "http://localhost:42535/api/DeptController/"+orgId;
+        }
+
+        public static string GetPorgress(string orgId,long deptId)
+        {
+            return "http://localhost:42535/api/Query/Progress/" + orgId+"/"+deptId;
         }
     }
 }

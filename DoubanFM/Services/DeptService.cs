@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Performance.Models;
 using Performance.APIs;
-using Performance.DataObjects;
+using Performance.Models;
 using Windows.Web.Http;
 
 namespace Performance.Services

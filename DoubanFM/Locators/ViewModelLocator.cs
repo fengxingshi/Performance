@@ -13,11 +13,15 @@ namespace Performance.Locators
     {
         private readonly static IDeptService deptService;
         private readonly static IPlayListService playListService;
+        private readonly static IQueryService queryService;
 
         static ViewModelLocator()
         {
             ServiceLocator.Default.RegisterSingleton<IDeptService, DeptService>();
             deptService = ServiceLocator.Default.Resolve<IDeptService>();
+
+            ServiceLocator.Default.RegisterSingleton<IQueryService,QueryService>();
+            queryService = ServiceLocator.Default.Resolve<IQueryService>();
 
             ServiceLocator.Default.RegisterSingleton<IPlayListService, PlayListService>();
             playListService = ServiceLocator.Default.Resolve<IPlayListService>();
@@ -36,6 +40,14 @@ namespace Performance.Locators
             get
             {
                 return new PlayListPageViewModel(playListService);
+            }
+        }
+
+        public ProgressPageViewModel ProgressList
+        {
+            get
+            {
+                return new ProgressPageViewModel(queryService);
             }
         }
     }

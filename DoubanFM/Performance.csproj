@@ -118,18 +118,22 @@
     </Compile>
     <Compile Include="Models\Channels.cs" />
     <Compile Include="Models\Dept.cs" />
+    <Compile Include="Models\DeptProgress.cs" />
     <Compile Include="Models\PlayList.cs" />
     <Compile Include="Navigations\NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\QueryService.cs" />
     <Compile Include="Services\DeptService.cs" />
     <Compile Include="Services\ChannelService.cs" />
     <Compile Include="Services\DataRequestService.cs" />
+    <Compile Include="Services\IQueryService.cs" />
     <Compile Include="Services\IDeptService.cs" />
     <Compile Include="Services\IChannelService.cs" />
     <Compile Include="Services\IDataRequestService.cs" />
     <Compile Include="Services\IPlayListService.cs" />
     <Compile Include="Services\PlayListService.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\ProgressPageViewModel.cs" />
     <Compile Include="ViewModels\PlayListPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\PlayListPage.xaml.cs">

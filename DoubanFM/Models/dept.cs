@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Performance.DataObjects
+namespace Performance.Models
 {
     public class Dept
     {
@@ -127,6 +127,6 @@ namespace Performance.DataObjects
     public class Depts
     {
         [JsonProperty("DeptList")]
-        public IEnumerable<Dept> DeptList { get; set; }
+        public List<Dept> DeptList { get; set; }
     }
 }
