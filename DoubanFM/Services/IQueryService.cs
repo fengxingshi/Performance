@@ -5,6 +5,6 @@ namespace Performance.Services
 {
     public interface IQueryService
     {
-        Task<DeptProgresses> GetProgressAsync(long deptId);
+        Task<DeptPes> GetProgressAsync(long deptId);
     }
 }

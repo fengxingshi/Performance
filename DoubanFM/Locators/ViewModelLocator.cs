@@ -19,12 +19,12 @@ namespace Performance.Locators
         {
             ServiceLocator.Default.RegisterSingleton<IDeptService, DeptService>();
             deptService = ServiceLocator.Default.Resolve<IDeptService>();
-
-            ServiceLocator.Default.RegisterSingleton<IQueryService,QueryService>();
-            queryService = ServiceLocator.Default.Resolve<IQueryService>();
-
+                       
             ServiceLocator.Default.RegisterSingleton<IPlayListService, PlayListService>();
             playListService = ServiceLocator.Default.Resolve<IPlayListService>();
+
+            ServiceLocator.Default.RegisterSingleton<IQueryService, QueryService>();
+            queryService = ServiceLocator.Default.Resolve<IQueryService>();
         }
 
         public MainPageViewModel Main

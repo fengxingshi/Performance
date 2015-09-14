@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Performance.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,25 @@ namespace Performance.Views
         public ProgressPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            ViewModel.NavigatedToCommand.Execute(e.Parameter);
+        }
+
+        public ProgressPageViewModel ViewModel
+        {
+            get
+            {
+                return this.DataContext as ProgressPageViewModel;
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

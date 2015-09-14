@@ -19,17 +19,18 @@ namespace Performance.ViewModels
             this._queryService = progressListService;
             NavigatedToCommand = new RelayCommand<object>((e) =>
               {
-                  this.LoadProgressList(Convert.ToInt64(e));
+                  LoadProgressList(Convert.ToInt64(e));
               });
+           
         }
 
-        private DeptProgresses progressList;
+        private DeptPes progressList;
 
-        public DeptProgresses DeptProgessList
+        public DeptPes DProgresses
         {
             get { return progressList; }
             set { progressList = value;
-                OnPropertyChanged(nameof(DeptProgresses));
+                OnPropertyChanged(nameof(DProgresses));
             }
         }
         
@@ -37,8 +38,8 @@ namespace Performance.ViewModels
 
         private async void LoadProgressList(long deptID)
         {
-            var result = await _queryService.GetProgressAsync(deptID);
-            this.DeptProgessList = result;
+            var result = await _queryService.GetProgressAsync(Convert.ToInt64(deptID));
+            this.DProgresses = result;
         }
     }
 }

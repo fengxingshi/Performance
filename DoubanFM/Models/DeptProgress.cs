@@ -7,30 +7,30 @@ using System.Threading.Tasks;
 
 namespace Performance.Models
 {
-    class DeptProgress
+    public class DeptProgress
     {
-        [JsonProperty("target_name")]
+        [JsonProperty("TargetName")]
         public string TargetName { get; set; }
 
-        [JsonProperty("first_name")]
+        [JsonProperty("FirstName")]
         public string FirstName { get; set; }
 
-        [JsonProperty("sencond_code")]
-        public string SencondCode { get; set; }
+        [JsonProperty("SecondCode")]
+        public string SecondCode { get; set; }
 
-        [JsonProperty("sencond_name")]
-        public string SencondName { get; set; }
+        [JsonProperty("SecondName")]
+        public string SecondName { get; set; }
 
-        [JsonProperty("nodename")]
+        [JsonProperty("NodeName")]
         public string NodeName { get; set; }
 
-        [JsonProperty("receive_depart_name")]
+        [JsonProperty("ReceiveDepartName")]
         public string ReceiveDepartName { get; set; }
 
-        [JsonProperty("assigner_name")]
+        [JsonProperty("assignerName")]
         public string assignerName { get; set; }
 
-        [JsonProperty("nowprogress")]
+        [JsonProperty("NowProgress")]
         public int NowProgress { get; set; }
 
         [JsonProperty("Janurary")]
@@ -71,9 +71,9 @@ namespace Performance.Models
 
     }
     [JsonObject(MemberSerialization.OptIn)]
-    public class DeptProgresses
+    public class DeptPes
     {
         [JsonProperty("DeptProgressList")]
-        public List<Dept> DeptProgressList { get; set; }
+        public List<DeptProgress> DeptProgressList { get; set; }
     }
 }

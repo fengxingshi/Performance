@@ -1,27 +1,32 @@
 ﻿<Page
-    x:Class="Performance.Views.ProgressPage"
+    x:Class="Performance.Views.ProgressPage"    
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Performance.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:Performance.Converters"
     DataContext="{Binding ProgressList,Source={StaticResource Locator}}"
     mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <converter:SecondMinuteConverter x:Key="SecondMinuteConverter" />
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="640" VerticalAlignment="Bottom">
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding DeptProgresses.DeptProgressList}">
+        <!--<StackPanel Orientation="Horizontal" Margin="10">-->
+        <TextBlock HorizontalAlignment="Center" Text="处室指标进度"  Grid.Row="0" FontSize="26.667" VerticalAlignment="Center"/>
+
+        <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding DProgresses.DeptProgressList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,10">
                         <StackPanel Orientation="Horizontal">
-                            <!--<Image Source="{Binding Picture}" Width="64" />-->
                             <StackPanel VerticalAlignment="Center" Margin="10,0">
-                                <TextBlock Text="{Binding SencondName}" FontWeight="Bold" Margin="0,5" />
+                                <TextBlock Text="{Binding SecondName}" FontWeight="Bold" Margin="0,5" />
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock>
                                         <Run Text="指标承担人:" />
@@ -31,6 +36,10 @@
                                         <Run Text="当前进度:" />
                                         <Run Text="{Binding NowProgress}" />
                                     </TextBlock>
+                                    <TextBlock Margin="20,0,0,0">
+                                        <Run Text="        " />
+                                    </TextBlock>
+                                    <ProgressBar Width="80" Height="10" Maximum="100" Value="{Binding NowProgress}" />
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -38,7 +47,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Image x:Name="image" HorizontalAlignment="Left" Width="55" Height="35" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="返回" Margin="10,10,10,8" Grid.Row="2"  VerticalAlignment="Center" d:LayoutOverrides="Height, LeftPosition, RightPosition" HorizontalAlignment="Stretch" Click="button_Click"/>
     </Grid>
 
 </Page>
