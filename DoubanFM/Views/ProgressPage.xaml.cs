@@ -46,5 +46,10 @@ namespace Performance.Views
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void full_back_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }
