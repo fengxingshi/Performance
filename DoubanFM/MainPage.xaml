@@ -18,7 +18,7 @@
             </GridView.Header>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="5" Background="#0066ff" Width="120" Height="120">
+                    <Border Margin="5" Background="#00b2f0" Width="120" Height="120">
                         <Border Background="#66c9f2" Width="120" Height="30" VerticalAlignment="Bottom">
                             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Name}" Foreground="Black" />
                         </Border>
