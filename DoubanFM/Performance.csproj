@@ -117,6 +117,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeptPage.xaml.cs">
+      <DependentUpon>DeptPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Channels.cs" />
     <Compile Include="Models\Dept.cs" />
     <Compile Include="Models\DeptProgress.cs" />
@@ -149,6 +152,7 @@
     <Content Include="Assets\返回.png" />
     <Content Include="Assets\项目图标.png" />
     <Content Include="Assets\首页.png" />
+    <Content Include="Assets\首页图标1.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -164,6 +168,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeptPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

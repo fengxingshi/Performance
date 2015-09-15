@@ -35,10 +35,11 @@ namespace Performance
                 //this.DataContext = new MainPageViewModel();
             }
         }
+        
 
-        private void full_back_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(DeptPage));
         }
     }
 }

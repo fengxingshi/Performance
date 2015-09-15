@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="Performance.DeptPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Performance"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:behavior="using:Performance.Behaviors"
+    NavigationCacheMode="Required"
+    DataContext="{Binding Main,Source={StaticResource Locator}}"
+    mc:Ignorable="d">
+
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BorderBrush="Gray" BorderThickness="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Background="BurlyWood" Grid.Column="0" Height="50" Width="80" x:Name="full_back" Click="full_back_Click" >
+                <Viewbox MaxHeight="50" MaxWidth="80">
+                    <SymbolIcon Symbol="Back"/>
+                </Viewbox>
+            </Button>
+            <Button Background="BurlyWood" Grid.Column="1" Height="50" Width="80" Click="Button_Click">
+                <Viewbox MaxHeight="50" MaxWidth="80">
+                    <SymbolIcon Symbol="Home"/>
+                </Viewbox>
+            </Button>
+            <!--<Button Background="BurlyWood" Grid.Column="2" Height="50" Width="80" Click="full_back_Click">
+                <Viewbox MaxHeight="50" MaxWidth="80">
+                    <SymbolIcon Symbol="CellPhone"/>
+                </Viewbox>
+            </Button>-->
+
+
+        </Grid>
+        <GridView Grid.Row="1" ItemsSource="{Binding Depts.DeptList}" Margin="10" IsItemClickEnabled="True" behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
+            <GridView.Header>
+                <TextBlock HorizontalAlignment="Center" Text="处室" />
+            </GridView.Header>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="5" Background="#00b2f0" Width="120" Height="120">
+                        <Border Background="#66c9f2" Width="120" Height="30" VerticalAlignment="Bottom">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Name}" Foreground="Black" />
+                        </Border>
+                    </Border>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
