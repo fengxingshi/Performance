@@ -12,7 +12,37 @@
 
     <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
     <Grid Background="AliceBlue">
-        <GridView ItemsSource="{Binding Depts.DeptList}" Margin="10" IsItemClickEnabled="True" behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BorderBrush="Gray" BorderThickness="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Background="BurlyWood" Grid.Column="0" Height="50" Width="80" x:Name="full_back" Click="full_back_Click" >
+                <Viewbox MaxHeight="50" MaxWidth="80">
+                    <SymbolIcon Symbol="Back"/>
+                </Viewbox>
+            </Button>
+            <Button Background="BurlyWood" Grid.Column="1" Height="50" Width="80" Click="full_back_Click">
+                <Viewbox MaxHeight="50" MaxWidth="80">
+                    <SymbolIcon Symbol="Home"/>
+                </Viewbox>
+            </Button>
+            <!--<Button Background="BurlyWood" Grid.Column="2" Height="50" Width="80" Click="full_back_Click">
+                <Viewbox MaxHeight="50" MaxWidth="80">
+                    <SymbolIcon Symbol="CellPhone"/>
+                </Viewbox>
+            </Button>-->
+
+
+        </Grid>
+        <GridView Grid.Row="1" ItemsSource="{Binding Depts.DeptList}" Margin="10" IsItemClickEnabled="True" behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
             <GridView.Header>
                 <TextBlock HorizontalAlignment="Center" Text="处室" />
             </GridView.Header>
