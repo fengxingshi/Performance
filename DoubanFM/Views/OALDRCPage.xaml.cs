@@ -1,6 +1,4 @@
-﻿using Performance.ViewModels;
-using Performance.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,37 +13,33 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-//“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
+// “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上提供
 
-namespace Performance
+namespace Performance.Views
 {
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class OALDRCPage : Page
     {
-        public MainPage()
+        public OALDRCPage()
         {
             this.InitializeComponent();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private void full_back_Click(object sender, RoutedEventArgs e)
         {
-            if (e.NavigationMode == NavigationMode.New)
-            {
-                //this.DataContext = new MainPageViewModel();
-            }
+            Frame.Navigate(typeof(MainPage));
         }
-        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(DeptPage));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OALDRCPage));
+
         }
     }
 }

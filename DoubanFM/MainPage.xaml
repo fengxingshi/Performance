@@ -55,7 +55,8 @@
                 </Viewbox>-->
             </Button>
             <Button Grid.Row="0" Grid.Column="3" Height="50" Width="250"  Content="办公系统" FontWeight="Bold"
-                    FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Click="Button_Click_1">
                 <!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Image Source="Assets/项目图标.png"/>
                 </Viewbox>-->
