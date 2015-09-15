@@ -1,5 +1,4 @@
-﻿using Performance.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,25 +20,11 @@ namespace Performance.Views
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class PlayListPage : Page
+    public sealed partial class BlankPage1 : Page
     {
-        public PlayListPage()
+        public BlankPage1()
         {
             this.InitializeComponent();
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            ViewModel.NavigatedToCommand.Execute(e.Parameter);
-        }
-
-        public PlayListPageViewModel ViewModel
-        {
-            get
-            {
-                return this.DataContext as PlayListPageViewModel;
-            }
         }
     }
 }

@@ -12,7 +12,6 @@ namespace Performance.Locators
     public class ViewModelLocator
     {
         private readonly static IDeptService deptService;
-        private readonly static IPlayListService playListService;
         private readonly static IQueryService queryService;
 
         static ViewModelLocator()
@@ -20,9 +19,6 @@ namespace Performance.Locators
             ServiceLocator.Default.RegisterSingleton<IDeptService, DeptService>();
             deptService = ServiceLocator.Default.Resolve<IDeptService>();
                        
-            ServiceLocator.Default.RegisterSingleton<IPlayListService, PlayListService>();
-            playListService = ServiceLocator.Default.Resolve<IPlayListService>();
-
             ServiceLocator.Default.RegisterSingleton<IQueryService, QueryService>();
             queryService = ServiceLocator.Default.Resolve<IQueryService>();
         }
@@ -34,14 +30,7 @@ namespace Performance.Locators
                 return new MainPageViewModel(deptService, App.NavigationService);
             }
         }
-
-        public PlayListPageViewModel PlayList
-        {
-            get
-            {
-                return new PlayListPageViewModel(playListService);
-            }
-        }
+        
 
         public ProgressPageViewModel ProgressList
         {
