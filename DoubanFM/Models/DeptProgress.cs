@@ -34,40 +34,40 @@ namespace Performance.Models
         public int NowProgress { get; set; }
 
         [JsonProperty("Janurary")]
-        public int Janurary { get; set; }
+        public float Janurary { get; set; }
 
         [JsonProperty("February")]
-        public int February { get; set; }
+        public float February { get; set; }
 
         [JsonProperty("March")]
-        public int March { get; set; }
+        public float March { get; set; }
 
         [JsonProperty("April")]
-        public int April { get; set; }
+        public float April { get; set; }
 
         [JsonProperty("May")]
-        public int May { get; set; }
+        public float May { get; set; }
 
         [JsonProperty("June")]
-        public int June { get; set; }
+        public float June { get; set; }
 
         [JsonProperty("July")]
-        public int July { get; set; }
+        public float July { get; set; }
 
         [JsonProperty("August")]
-        public int August { get; set; }
+        public float August { get; set; }
 
         [JsonProperty("September")]
-        public int Setember { get; set; }
+        public float Setember { get; set; }
 
         [JsonProperty("October")]
-        public int October { get; set; }
+        public float October { get; set; }
 
         [JsonProperty("November")]
-        public int November { get; set; }
+        public float November { get; set; }
 
         [JsonProperty("December")]
-        public int December { get; set; }
+        public float December { get; set; }
 
     }
     [JsonObject(MemberSerialization.OptIn)]

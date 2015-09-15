@@ -85,68 +85,67 @@
                                     </TextBlock>
                                     <ProgressBar Width="80" Height="10" Maximum="100" Value="{Binding NowProgress}" />
 
-                                </StackPanel>
-
-                                <StackPanel Orientation="Horizontal" Margin="0,5">
+                                </StackPanel>                                
+                                    <StackPanel Orientation="Horizontal" Margin="0,5">
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="一月:" />
                                         <Run Text="{Binding Janurary}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";" />
                                     </TextBlock>
                                     <TextBlock  FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="二月:" />
                                         <Run Text="{Binding February}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="三月:" />
                                         <Run Text="{Binding March}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="四月:" />
                                         <Run Text="{Binding April}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="五月:" />
                                         <Run Text="{Binding May}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="六月:" />
                                         <Run Text="{Binding June}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="七月:" />
                                         <Run Text="{Binding July}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="八月:" />
                                         <Run Text="{Binding August}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="九月:" />
                                         <Run Text="{Binding September}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
-                                        <Run Text="  十月:" />
+                                        <Run Text="  十月: " />
                                         <Run Text="{Binding October}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";  " />
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="  十一月:" />
                                         <Run Text="{Binding November}" />
-                                        <Run Text="%;  " />
+                                        <Run Text=";" />                                        
                                     </TextBlock>
                                     <TextBlock FontWeight="ExtraLight" FontSize="10">
                                         <Run Text="  十二月:" />
                                         <Run Text="{Binding December}" />
-                                        <Run Text="%;" />
+                                        <Run Text=";" />
                                     </TextBlock>
                                 </StackPanel>
                                 
