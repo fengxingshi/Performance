@@ -117,7 +117,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeptPage.xaml.cs">
+    <Compile Include="Views\DeptPage.xaml.cs">
       <DependentUpon>DeptPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Channels.cs" />
@@ -171,7 +171,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DeptPage.xaml">
+    <Page Include="Views\DeptPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
