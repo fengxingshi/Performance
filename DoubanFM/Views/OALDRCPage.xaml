@@ -34,7 +34,6 @@
 
 
         </Grid>
-        <WebView Grid.Row="1" Source="http://192.168.11.55:19763/NOA/Get"/>
-
+        <WebView Grid.Row="1" Source="http://localhost:42535/OA/GetOALDRC"/>
     </Grid>
 </Page>

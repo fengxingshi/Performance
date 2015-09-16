@@ -47,5 +47,10 @@ namespace Performance
         {
             Frame.Navigate(typeof(OALDRCPage));
         }
+
+        private void MenuBt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
