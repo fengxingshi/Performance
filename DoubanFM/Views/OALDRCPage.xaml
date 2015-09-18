@@ -26,7 +26,7 @@
                     <SymbolIcon Symbol="Back"/>
                 </Viewbox>
             </Button>
-            <Button Background="BurlyWood" Grid.Column="1" Height="50" Width="80" Click="Button_Click">
+            <Button Background="AliceBlue" Grid.Column="1" Height="50" Width="80" Click="Button_Click">
                 <Viewbox MaxHeight="50" MaxWidth="80">
                     <SymbolIcon Symbol="Home"/>
                 </Viewbox>
@@ -34,6 +34,7 @@
 
 
         </Grid>
-        <WebView Grid.Row="1" Source="http://localhost:42535/OA/GetOALDRC"/>
+        <!--<WebView Grid.Row="1" Source="http://localhost:42535/OA/GetOALDRC"/>-->
+        <WebView Grid.Row="1" Source="http://localhost:42535/Publish/GetPublishKpi"/>
     </Grid>
 </Page>

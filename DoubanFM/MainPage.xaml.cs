@@ -50,6 +50,11 @@ namespace Performance
 
         private void MenuBt_Click(object sender, RoutedEventArgs e)
         {
+            Splitter.IsPaneOpen = !Splitter.IsPaneOpen;
+        }
+
+        private void ScenarioControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

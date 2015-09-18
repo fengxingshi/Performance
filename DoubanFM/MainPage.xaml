@@ -28,6 +28,15 @@
                 </Border>
             </StackPanel>
         </Grid>
+        <SplitView x:Name="Splitter" IsPaneOpen="False" 
+                       Grid.Column="0"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <!--<Grid>
+                <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" Tapped="Tapped" 
+                           SelectionChanged="selChanged">
+                    
+                </GridView>
+            </Grid>-->
+        </SplitView>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="58"/>
@@ -44,7 +53,9 @@
             <Image Grid.Row="1" Grid.Column="1" Source="Assets/首页图标1.png" ></Image>
             <TextBlock Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3" Foreground="White" FontWeight="Bold" FontSize="30"
                        HorizontalAlignment="Center" VerticalAlignment="Center">河北财政一体化</TextBlock>
-            
+
+           
+
         </Grid>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
