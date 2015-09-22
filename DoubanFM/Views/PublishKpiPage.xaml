@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Performance.Views.OALDRCPage"
+    x:Class="Performance.Views.PublishKpiPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Performance.Views"
@@ -34,7 +34,7 @@
 
 
         </Grid>
-        <WebView Grid.Row="1" Source="http://localhost:42535/OA/GetOALDRC"/>
-        <!--<WebView Grid.Row="1" Source="http://localhost:42535/Publish/GetPublishKpi"/>-->
+        <!--<WebView Grid.Row="1" Source="http://localhost:42535/OA/GetOALDRC"/>-->
+        <WebView Grid.Row="1" Source="http://localhost:42535/Publish/GetPublishKpi"/>
     </Grid>
 </Page>

@@ -41,5 +41,6 @@ namespace Performance.Models
     {
         [JsonProperty("MenuList")]
         public List<Menu> Menulist { get; set; }
+
     }
 }

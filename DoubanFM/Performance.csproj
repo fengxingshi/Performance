@@ -140,6 +140,9 @@
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\ProgressPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\PublishKpiPage.xaml.cs">
+      <DependentUpon>PublishKpiPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\OALDRCPage.xaml.cs">
       <DependentUpon>OALDRCPage.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
     <Page Include="Styles\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PublishKpiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\OALDRCPage.xaml">
       <SubType>Designer</SubType>

@@ -29,7 +29,7 @@
                 </Border>
             </StackPanel>
         </Grid>
-        <SplitView x:Name="Splitter" IsPaneOpen="False" 
+        <SplitView x:Name="Splitter" IsPaneOpen="{Binding MPageViewModel.IsOpen}" 
                        Grid.Column="0"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <SplitView.Pane>
             <Grid Background="White">
@@ -39,21 +39,7 @@
                            behavior:ItemClickCommand.Command="{Binding MenuClickCommand}">
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                                <StackPanel Orientation="Vertical">
-                                    <!--<Ellipse x:Name="Ellipse" 
-                             Width ="140"
-                             Height="140"
-                             VerticalAlignment="Center"
-                             HorizontalAlignment="Center"
-                             Fill="LightGray"
-                             Margin="4,4,4,4"/>-->
-                                    <!--Phase 2: TextBlock with contact name-->
-                                    <!--<TextBlock  
-                               Margin="4,4,0,4"
-                               Text="{Binding MName}" 
-                               x:Phase="2" 
-                               Style="{ThemeResource BodyTextBlockStyle}" 
-                               HorizontalAlignment="Center"/>-->
+                                <StackPanel Orientation="Vertical">                                   
                                     <Image Source="{Binding IconImage}" 
                                            Width="66" Height="66" Margin="4,4,0,4"
                                            VerticalAlignment="Center"
@@ -112,6 +98,7 @@
                    
                 </Viewbox>-->
             </Button>
+            
             <Button Grid.Row="0" Grid.Column="3" Height="50" Width="250"  Content="办公系统"
                     x:Name="OA" FontWeight="Bold"
                     FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"

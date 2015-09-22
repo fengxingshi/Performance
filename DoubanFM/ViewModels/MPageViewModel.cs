@@ -25,10 +25,13 @@ namespace Performance.ViewModels
 
         public ICommand MenuClickCommand { get; set; }
         public RelayCommand<object> ButtonClickCommand { get; set; }
+       
+        public bool IsOpen { get; set; }
 
         public MPageViewModel(IMenusService menusService, NavigationService navigation)
         {
             this._menusService = menusService;
+            IsOpen = false;
             //LoadMenus("行政绩效");
             MenuClickCommand = new RelayCommand<object>((e) =>
             {
@@ -38,6 +41,10 @@ namespace Performance.ViewModels
                     navigation.Navigate<Views.DeptPage>();
                 }
                 else if (parameter.MCode == "zbgs")
+                {
+                    navigation.Navigate<Views.PublishKpiPage>();
+                }
+                else if (parameter.MCode == "ldrc")
                 {
                     navigation.Navigate<Views.OALDRCPage>();
                 }
@@ -51,6 +58,8 @@ namespace Performance.ViewModels
                     ssxt = "行政绩效";
                 }
                 LoadMenus(ssxt);
+                IsOpen = !IsOpen;
+
             });
 
 
