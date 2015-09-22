@@ -117,6 +117,10 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Menus.cs" />
+    <Compile Include="Services\IMenusService.cs" />
+    <Compile Include="Services\MenusService.cs" />
+    <Compile Include="ViewModels\MPageViewModel.cs" />
     <Compile Include="Views\DeptPage.xaml.cs">
       <DependentUpon>DeptPage.xaml</DependentUpon>
     </Compile>

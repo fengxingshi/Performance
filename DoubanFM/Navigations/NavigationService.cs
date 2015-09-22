@@ -28,6 +28,7 @@ namespace Performance.Navigations
                 this._frame.GoForward();
         }
 
+
         public bool Navigate(Type source, object parameter = null)
         {
             return _frame.Navigate(source, parameter);
@@ -38,5 +39,6 @@ namespace Performance.Navigations
             var type = typeof(T);
             return Navigate(type, parameter);
         }
+        
     }
 }

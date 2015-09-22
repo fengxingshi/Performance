@@ -8,16 +8,22 @@ namespace Performance.APIs
 {
     public class WebAPI
     {
-        //string url = "http://localhost:42535/api/";
+        private readonly static string url = "http://localhost:42535/api/";
 
         public static string GetDept(string orgId)
         {
-            return "http://localhost:42535/api/DeptController/"+orgId;
+            return url + "/DeptController/" + orgId;
         }
 
         public static string GetPorgress(string orgId,long deptId)
         {
-            return "http://localhost:42535/api/Query/Progress/" + orgId+"/"+deptId;
+            return  url + "/Query/Progress/" + orgId+"/"+deptId;
         }
+
+        public static string GetMenus(string ssxt)
+        {
+            return url + "/Query/Menus/" + ssxt;
+        }
+
     }
 }

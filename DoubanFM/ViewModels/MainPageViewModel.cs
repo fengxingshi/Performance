@@ -10,17 +10,6 @@ namespace Performance.ViewModels
     {
         private readonly IDeptService _deptService;
 
-        public MainPageViewModel(IDeptService deptService, NavigationService navigation)
-        {
-            this._deptService = deptService;
-            LoadDepts();
-            ItemClickCommand = new RelayCommand<object>((e) =>
-            {
-                var parameter = e as Dept;
-                navigation.Navigate<Views.ProgressPage>(parameter.DepartmentID);
-            });
-        }
-
         private Depts depts;
 
         public Depts Depts
@@ -34,6 +23,18 @@ namespace Performance.ViewModels
         }
 
         public ICommand ItemClickCommand { get; set; }
+
+        public MainPageViewModel(IDeptService deptService, NavigationService navigation)
+        {
+            this._deptService = deptService;
+            LoadDepts();
+            ItemClickCommand = new RelayCommand<object>((e) =>
+            {
+                var parameter = e as Dept;
+                navigation.Navigate<Views.ProgressPage>(parameter.DepartmentID);
+            });
+        }
+               
 
         private async void LoadDepts()
         {

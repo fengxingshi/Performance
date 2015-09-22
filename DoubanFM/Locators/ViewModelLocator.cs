@@ -13,14 +13,26 @@ namespace Performance.Locators
     {
         private readonly static IDeptService deptService;
         private readonly static IQueryService queryService;
-
+        private readonly static IMenusService menusService;
+   
         static ViewModelLocator()
         {
+            ServiceLocator.Default.RegisterSingleton<IMenusService, MenusService>();
+            menusService = ServiceLocator.Default.Resolve<IMenusService>();
+
             ServiceLocator.Default.RegisterSingleton<IDeptService, DeptService>();
             deptService = ServiceLocator.Default.Resolve<IDeptService>();
                        
             ServiceLocator.Default.RegisterSingleton<IQueryService, QueryService>();
             queryService = ServiceLocator.Default.Resolve<IQueryService>();
+        }
+
+        public MPageViewModel MPV
+        {
+            get
+            {
+                return new MPageViewModel(menusService, App.NavigationService);
+            }
         }
 
         public MainPageViewModel Main
