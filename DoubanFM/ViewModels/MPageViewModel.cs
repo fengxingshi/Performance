@@ -11,23 +11,6 @@ namespace Performance.ViewModels
     {
         private readonly IMenusService _menusService;
 
-        public MPageViewModel(IMenusService menusService, NavigationService navigation)
-        {
-            this._menusService = menusService;
-            LoadMenus("行政绩效");
-            ItemClickCommand = new RelayCommand<object>((e) =>
-            {
-                navigation.Navigate<Views.DeptPage>();
-            });
-            ButtonClickCommand = new RelayCommand<object>((e) =>
-            {
-                Button bt = e as Button;
-                LoadMenus(bt.Name);
-            });
-            
-           
-        }
-
         private Menus menus;
 
         public Menus Menus
@@ -40,8 +23,40 @@ namespace Performance.ViewModels
             }
         }
 
-        public ICommand ItemClickCommand { get; set; }
-        public ICommand ButtonClickCommand { get; set; }
+        public ICommand MenuClickCommand { get; set; }
+        public RelayCommand<object> ButtonClickCommand { get; set; }
+
+        public MPageViewModel(IMenusService menusService, NavigationService navigation)
+        {
+            this._menusService = menusService;
+            //LoadMenus("行政绩效");
+            MenuClickCommand = new RelayCommand<object>((e) =>
+            {
+                var parameter = e as Menu;
+                if (parameter.MCode == "cszbjd")
+                {
+                    navigation.Navigate<Views.DeptPage>();
+                }
+                else if (parameter.MCode == "zbgs")
+                {
+                    navigation.Navigate<Views.OALDRCPage>();
+                }
+            });
+            ButtonClickCommand = new RelayCommand<object>((e) =>
+            {
+                Button bt = e as Button;
+                var ssxt = string.Empty;
+                if (bt == null)
+                {
+                    ssxt = "行政绩效";
+                }
+                LoadMenus(ssxt);
+            });
+
+
+        }
+
+        
 
         private async void LoadMenus(object ssxt)
         {

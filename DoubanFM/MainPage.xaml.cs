@@ -54,9 +54,6 @@ namespace Performance
             Splitter.IsPaneOpen = !Splitter.IsPaneOpen;
         }
 
-        private void ScenarioControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
     }
 }
