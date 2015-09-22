@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Performance.Services
 {
@@ -14,6 +15,7 @@ namespace Performance.Services
         {
             string url = WebAPI.GetMenus("行政绩效");
             var result = await GetDataAsync(url);
+           
             return result ?? new Menus();
         }
     }

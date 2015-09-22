@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:behavior="using:Performance.Behaviors"
-    NavigationCacheMode="Required"    
+    NavigationCacheMode="Required"  
+    DataContext="{Binding MPV,Source={StaticResource Locator}}"
     mc:Ignorable="d">
 
     <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
@@ -30,12 +31,42 @@
         </Grid>
         <SplitView x:Name="Splitter" IsPaneOpen="False" 
                        Grid.Column="0"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3">
-            <!--<Grid>
-                <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" Tapped="Tapped" 
-                           SelectionChanged="selChanged">
-                    
+            <SplitView.Pane>
+            <Grid Background="White">
+                <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" 
+                           ItemsSource="{Binding Menus.Menulist}"
+                          behavior:ItemClickCommand.Command="{Binding ItemClickCommand}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <!--<Ellipse x:Name="Ellipse" 
+                             Width ="140"
+                             Height="140"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Fill="LightGray"
+                             Margin="4,4,4,4"/>-->
+                                    <!--Phase 2: TextBlock with contact name-->
+                                    <!--<TextBlock  
+                               Margin="4,4,0,4"
+                               Text="{Binding MName}" 
+                               x:Phase="2" 
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>-->
+                                    <Image Source="{Binding IconImage}" 
+                                           Width="98" Height="99" Margin="4,4,0,4"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"/>
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                               Text="{Binding MName}" Foreground="CornflowerBlue" 
+                                               Margin="4,4,0,4"/>
+
+                                </StackPanel>
+                            </DataTemplate>
+                    </GridView.ItemTemplate>
                 </GridView>
-            </Grid>-->
+            </Grid>
+            </SplitView.Pane>
         </SplitView>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -71,7 +102,8 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
             
-            <Button Grid.Row="0" Grid.Column="1" Height="50" Width="250"  Content="行政绩效系统" FontWeight="Bold"
+            <Button Grid.Row="0" Grid.Column="1" Height="50" Width="250"  Content="行政绩效系统"
+                    x:Name="行政绩效" FontWeight="Bold"
                     FontSize="20" Foreground="White"  HorizontalAlignment="Right" VerticalAlignment="Center"
                      Click="Button_Click">
                 <!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -79,7 +111,8 @@
                    
                 </Viewbox>-->
             </Button>
-            <Button Grid.Row="0" Grid.Column="3" Height="50" Width="250"  Content="办公系统" FontWeight="Bold"
+            <Button Grid.Row="0" Grid.Column="3" Height="50" Width="250"  Content="办公系统"
+                    x:Name="OA" FontWeight="Bold"
                     FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"
                     Click="Button_Click_1">
                 <!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">

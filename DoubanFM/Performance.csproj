@@ -118,8 +118,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Menus.cs" />
+    <Compile Include="Models\Projects.cs" />
     <Compile Include="Services\IMenusService.cs" />
     <Compile Include="Services\MenusService.cs" />
+    <Compile Include="ViewModels\Base64ImageConverter.cs" />
     <Compile Include="ViewModels\MPageViewModel.cs" />
     <Compile Include="Views\DeptPage.xaml.cs">
       <DependentUpon>DeptPage.xaml</DependentUpon>
@@ -156,8 +158,11 @@
     <Content Include="Assets\performance.png" />
     <Content Include="Assets\splash-sdk.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\处室指标进度.png" />
+    <Content Include="Assets\指标公示.png" />
     <Content Include="Assets\返回.png" />
     <Content Include="Assets\项目图标.png" />
+    <Content Include="Assets\领导日程.png" />
     <Content Include="Assets\首页.png" />
     <Content Include="Assets\首页图标1.png" />
     <Content Include="Properties\Default.rd.xml" />

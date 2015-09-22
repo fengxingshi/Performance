@@ -40,7 +40,8 @@ namespace Performance
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(DeptPage));
+            //Frame.Navigate(typeof(DeptPage));
+            Splitter.IsPaneOpen = !Splitter.IsPaneOpen;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

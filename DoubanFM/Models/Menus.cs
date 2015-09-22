@@ -4,38 +4,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Performance.Models
 {
 
     public class Menu
     {
-        [JsonProperty("id")]
+        [JsonProperty("ID")]
         public int Id { get; set; }
 
-        [JsonProperty("m_code")]
+        [JsonProperty("MCODE")]
         public string MCode { get; set; }
 
-        [JsonProperty("m_name")]
+        [JsonProperty("MNAME")]
         public string MName { get; set; }
 
-        [JsonProperty("image")]
-        public byte[] image { get; set; }
+        [JsonProperty("IMAGE")]
+        public byte[] Image { get; set; }
 
-        [JsonProperty("ssxt")]
+        [JsonProperty("ICONIMAGE")]
+        public string IconImage { get; set; }
+
+        [JsonProperty("SSXT")]
         public string Ssxt { get; set; }
 
-        [JsonProperty("M_JC")]
+        [JsonProperty("MJC")]
         public string Mjc { get; set; }
 
-        [JsonProperty("M_SJCD")]
+        [JsonProperty("MSJCD")]
         public string Msjcd { get; set; }
     }
 
-
+    [JsonObject(MemberSerialization.OptIn)]
     public class Menus
     {
-        [JsonProperty("Menus")]
+        [JsonProperty("MenuList")]
         public List<Menu> Menulist { get; set; }
     }
 }

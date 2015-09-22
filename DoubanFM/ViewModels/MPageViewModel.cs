@@ -3,6 +3,7 @@ using Performance.Models;
 using Performance.Navigations;
 using Performance.Services;
 using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
 
 namespace Performance.ViewModels
 {
@@ -18,6 +19,12 @@ namespace Performance.ViewModels
             {
                 navigation.Navigate<Views.DeptPage>();
             });
+            ButtonClickCommand = new RelayCommand<object>((e) =>
+            {
+                Button bt = e as Button;
+                LoadMenus(bt.Name);
+            });
+            
            
         }
 
@@ -34,11 +41,11 @@ namespace Performance.ViewModels
         }
 
         public ICommand ItemClickCommand { get; set; }
-        public ICommand ButtenClickCommand { get; set; }
+        public ICommand ButtonClickCommand { get; set; }
 
-        private async void LoadMenus(string ssxt)
+        private async void LoadMenus(object ssxt)
         {
-            var result = await _menusService.GetMenusAsync(ssxt);
+            var result = await _menusService.GetMenusAsync(ssxt.ToString());
             this.Menus = result;
         }
     }
