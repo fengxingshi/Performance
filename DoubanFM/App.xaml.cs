@@ -1,4 +1,5 @@
 ﻿using Performance.Navigations;
+using Performance.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;

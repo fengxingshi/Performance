@@ -22,9 +22,9 @@ namespace Performance
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MainPage_old : Page
     {
-        public MainPage()
+        public MainPage_old()
         {
             this.InitializeComponent();
         }
@@ -37,6 +37,22 @@ namespace Performance
         //    }
         //}
         
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Frame.Navigate(typeof(DeptPage));
+            Splitter.IsPaneOpen = !Splitter.IsPaneOpen;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OALDRCPage));
+        }
+
+        private void MenuBt_Click(object sender, RoutedEventArgs e)
+        {
+            Splitter.IsPaneOpen = !Splitter.IsPaneOpen;
+        }
 
        
     }
