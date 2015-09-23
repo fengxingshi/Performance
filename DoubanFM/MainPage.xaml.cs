@@ -29,13 +29,13 @@ namespace Performance
             this.InitializeComponent();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if (e.NavigationMode == NavigationMode.New)
-            {
-                //this.DataContext = new MainPageViewModel();
-            }
-        }
+        //protected override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    if (e.NavigationMode == NavigationMode.New)
+        //    {
+        //        //this.DataContext = new MainPageViewModel();
+        //    }
+        //}
         
 
         private void Button_Click(object sender, RoutedEventArgs e)

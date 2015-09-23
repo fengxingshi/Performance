@@ -8,9 +8,9 @@ namespace Performance.Models
 {
     public class Project
     {
-        public string Name { get; set; }
+        public string PName { get; set; }
 
-        public string Code { get; set; }
+        public string PCode { get; set; }
     }
     public class Projects
     {

@@ -2,6 +2,7 @@
 using Performance.Models;
 using Performance.Navigations;
 using Performance.Services;
+using System.Collections.Generic;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 
@@ -23,6 +24,28 @@ namespace Performance.ViewModels
             }
         }
 
+        private Controller ctl;
+
+        public Controller Ctl
+        {
+            get { return ctl; }
+            set {
+                ctl = value;
+                OnPropertyChanged(nameof(Menus));
+            }
+
+        }
+        private Projects pjs;
+
+        public Projects Pjs
+        {
+            get { return pjs; }
+            set { pjs = value;
+                OnPropertyChanged("Projects");
+                    }
+        }
+
+
         public ICommand MenuClickCommand { get; set; }
         public RelayCommand<object> ButtonClickCommand { get; set; }
        
@@ -32,6 +55,17 @@ namespace Performance.ViewModels
         {
             this._menusService = menusService;
             IsOpen = false;
+            Pjs = new Projects();
+            Project pj1 = new Project();
+            List<Project> list = new List<Project>();
+            pj1.PCode = "行政绩效";
+            pj1.PName = "行政绩效";
+            list.Add(pj1);
+            Project pj2 = new Project();
+            pj2.PCode = "OA";
+            pj2.PName = "办公自动化";
+            list.Add(pj2);
+            Pjs.ProjectList = list;
             //LoadMenus("行政绩效");
             MenuClickCommand = new RelayCommand<object>((e) =>
             {
@@ -49,19 +83,26 @@ namespace Performance.ViewModels
                     navigation.Navigate<Views.OALDRCPage>();
                 }
             });
+            
             ButtonClickCommand = new RelayCommand<object>((e) =>
             {
-                Button bt = e as Button;
+                var p = e as Project;
                 var ssxt = string.Empty;
-                if (bt == null)
+                if (p == null)
                 {
                     ssxt = "行政绩效";
                 }
+                else
+                {
+                    ssxt = p.PCode;
+                }
                 LoadMenus(ssxt);
-                IsOpen = !IsOpen;
+                Ctl = new Controller();
+                Ctl.IsOpen = !IsOpen;
+                IsOpen = Ctl.IsOpen;
 
             });
-
+            //ButtonClickCommand.Execute = new System.Action<object>(LoadMenus)
 
         }
 

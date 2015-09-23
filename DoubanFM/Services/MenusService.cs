@@ -13,7 +13,7 @@ namespace Performance.Services
     {
         public async Task<Menus> GetMenusAsync(string ssxt)
         {
-            string url = WebAPI.GetMenus("行政绩效");
+            string url = WebAPI.GetMenus(ssxt);
             var result = await GetDataAsync(url);
            
             return result ?? new Menus();

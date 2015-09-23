@@ -29,7 +29,7 @@
                 </Border>
             </StackPanel>
         </Grid>
-        <SplitView x:Name="Splitter" IsPaneOpen="{Binding MPageViewModel.IsOpen}" 
+        <SplitView x:Name="Splitter" IsPaneOpen="{Binding Ctl.IsOpen}" 
                        Grid.Column="0"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <SplitView.Pane>
             <Grid Background="White">
@@ -39,7 +39,14 @@
                            behavior:ItemClickCommand.Command="{Binding MenuClickCommand}">
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                                <StackPanel Orientation="Vertical">                                   
+                                <StackPanel Orientation="Vertical">
+                                    <!--<Ellipse x:Name="Ellipse" 
+                             Width ="140"
+                             Height="140"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Fill="LightGray"
+                             Margin="4,4,4,4"/>-->
                                     <Image Source="{Binding IconImage}" 
                                            Width="66" Height="66" Margin="4,4,0,4"
                                            VerticalAlignment="Center"
@@ -89,24 +96,50 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
             
-            <Button Grid.Row="0" Grid.Column="1" Height="50" Width="250"  Content="行政绩效系统"
+            <!--<Button Grid.Row="0" Grid.Column="1" Height="50" Width="250"  Content="行政绩效系统"
                     x:Name="行政绩效" FontWeight="Bold"
                     FontSize="20" Foreground="White"  HorizontalAlignment="Right" VerticalAlignment="Center"
                      Command="{Binding ButtonClickCommand}">
-                <!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                --><!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Image Source="Assets/项目图标.png"/>
                    
-                </Viewbox>-->
+                </Viewbox>--><!--
             </Button>
             
             <Button Grid.Row="0" Grid.Column="3" Height="50" Width="250"  Content="办公系统"
                     x:Name="OA" FontWeight="Bold"
                     FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"
                     Click="Button_Click_1">
-                <!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">
+                --><!--<Viewbox MaxHeight="50" MaxWidth="80" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Image Source="Assets/项目图标.png"/>
-                </Viewbox>-->
-            </Button>
+                </Viewbox>--><!--                
+            </Button>-->
+            <GridView Background="#00b2f0" Height="auto" Width="auto" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3"
+                      IsItemClickEnabled="True"  IsSwipeEnabled="True" ItemsSource="{Binding Pjs.ProjectList}"
+                 behavior:ItemClickCommand.Command="{Binding ButtonClickCommand}"
+                      >
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" Background="Blue" Height="50" Width="250"
+                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock FontSize="20" Text="{Binding PName}" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       Margin="4,0,4,4"
+                           >
+
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <!--<StackPanel Orientation="Vertical" Background="Red" Height="50" Width="250"
+                            VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock FontSize="20" Text="{Binding PName}" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           >
+
+                </TextBlock>
+                </StackPanel>-->
+            </GridView>
+            
         </Grid>
     </Grid>
 </Page>

@@ -16,6 +16,11 @@ namespace Performance.ViewModels
             var handler = PropertyChanged;
             if (handler != null)
                 handler(this, new PropertyChangedEventArgs(propertyName));
+
+            //if (PropertyChanged != null)
+            //{
+            //    PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //}
         }
     }
 }
