@@ -12,22 +12,38 @@
 
     <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
     <Grid Background="AliceBlue">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="aaaaa"></Button>
-        <Grid Grid.Column="0">
-            <GridView Background="CornflowerBlue" Height="auto" Width="auto" Grid.Row="0" 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00b2f0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Image Grid.Column="1" Source="Assets\首页图标1.png"></Image>
+
+            <TextBlock Grid.Column="3" Text="河北财政一体化" FontSize="30" Foreground="White" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <GridView Background="Firebrick" Height="auto" Width="auto" Grid.Row="0" 
                       IsItemClickEnabled="True"  IsSwipeEnabled="True" ItemsSource="{Binding Pjs.ProjectList}"
                  behavior:ItemClickCommand.Command="{Binding ButtonClickCommand}"
                       >
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical"  Height="50" Width="120"
+                        <StackPanel Orientation="Vertical"  Height="50" Width="220"
                             VerticalAlignment="Top" HorizontalAlignment="Center">
                             <!--<Image Source="Assets\12923 (2).png" Height="120" Width="120"></Image>-->
-                            <Border Height="50" Width="120" Background="{Binding PColor}"
+                            <Border Height="50" Width="220" Background="{Binding PColor}"
                                     VerticalAlignment="Center" HorizontalAlignment="Center">
                                 <TextBlock FontSize="20" Text="{Binding PName}" 
                                        VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -46,7 +62,7 @@
                 </StackPanel>-->
             </GridView>
         </Grid>
-        <Grid Background="White" Grid.Column="1">
+        <Grid Background="White" Grid.Row="0" Grid.Column="1">
             <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" 
                            ItemsSource="{Binding Menus.Menulist}"
                            IsItemClickEnabled="True"
@@ -73,6 +89,8 @@
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
+        </Grid>
+
         </Grid>
     </Grid>
 </Page>

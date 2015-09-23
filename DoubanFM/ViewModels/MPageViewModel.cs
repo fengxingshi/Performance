@@ -61,7 +61,7 @@ namespace Performance.ViewModels
             List<Project> list = new List<Project>();
             pj1.PCode = "行政绩效";
             pj1.PName = "行政绩效";
-            pj1.PColor = "#00b2f0";
+            pj1.PColor = "Blue";
             list.Add(pj1);
             Project pj2 = new Project();
             pj2.PCode = "OA";
