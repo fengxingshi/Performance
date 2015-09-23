@@ -157,6 +157,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\12923 %282%29.png" />
     <Content Include="Assets\fanhui.png" />
     <Content Include="Assets\OA.png" />
     <Content Include="Assets\performance.png" />

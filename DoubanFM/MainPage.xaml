@@ -114,20 +114,23 @@
                     <Image Source="Assets/项目图标.png"/>
                 </Viewbox>--><!--                
             </Button>-->
-            <GridView Background="#00b2f0" Height="auto" Width="auto" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3"
+            <GridView Background="#00b2f0" Height="auto" Width="auto" Grid.Row="0" Grid.Column="3" 
+                      Grid.ColumnSpan="3" Grid.RowSpan="3"
                       IsItemClickEnabled="True"  IsSwipeEnabled="True" ItemsSource="{Binding Pjs.ProjectList}"
                  behavior:ItemClickCommand.Command="{Binding ButtonClickCommand}"
                       >
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical" Background="Blue" Height="50" Width="250"
-                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Vertical"  Height="50" Width="220"
+                            VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <!--<Image Source="Assets\12923 (2).png" Height="120" Width="120"></Image>-->
+                            <Border Height="50" Width="220" Background="{Binding PColor}"
+                                    VerticalAlignment="Center" HorizontalAlignment="Center">
                             <TextBlock FontSize="20" Text="{Binding PName}" 
-                                       VerticalAlignment="Center" HorizontalAlignment="Center"
-                                       Margin="4,0,4,4"
-                           >
+                                       VerticalAlignment="Center" HorizontalAlignment="Center">
 
                             </TextBlock>
+                            </Border>
                         </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
 
 namespace Performance.Models
 {
@@ -11,6 +12,8 @@ namespace Performance.Models
         public string PName { get; set; }
 
         public string PCode { get; set; }
+
+        public string PColor { get; set; }
     }
     public class Projects
     {
