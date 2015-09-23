@@ -14,6 +14,8 @@ namespace Performance.Models
         public string PCode { get; set; }
 
         public string PColor { get; set; }
+
+        public string Image { get; set; }
     }
     public class Projects
     {

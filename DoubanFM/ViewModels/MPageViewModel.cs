@@ -61,15 +61,17 @@ namespace Performance.ViewModels
             List<Project> list = new List<Project>();
             pj1.PCode = "行政绩效";
             pj1.PName = "行政绩效";
-            pj1.PColor = "Blue";
+            pj1.PColor = "#b571cb";
+            pj1.Image = @"Assets\行政绩效.png";
             list.Add(pj1);
             Project pj2 = new Project();
             pj2.PCode = "OA";
             pj2.PName = "办公自动化";
-            pj2.PColor = "#00b2f0";
+            pj2.PColor = "#b571cb";
+            pj2.Image = @"Assets\OA.png";
             list.Add(pj2);
             Pjs.ProjectList = list;
-            //LoadMenus("行政绩效");
+            LoadMenus("行政绩效");
             MenuClickCommand = new RelayCommand<object>((e) =>
             {
                 var parameter = e as Menu;
