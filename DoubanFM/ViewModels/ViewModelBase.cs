@@ -13,14 +13,14 @@ namespace Performance.ViewModels
 
         public void OnPropertyChanged(string propertyName)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
+            //var handler = PropertyChanged;
+            //if (handler != null)
+            //    handler(this, new PropertyChangedEventArgs(propertyName));
 
-            //if (PropertyChanged != null)
-            //{
-            //    PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            //}
+            if (PropertyChanged != null)
+            {
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

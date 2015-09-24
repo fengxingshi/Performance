@@ -13,33 +13,33 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace Performance.ViewModels
 {
-    public class Base64ImageConverter : IValueConverter
+    public class Base64ImageConverter 
 
     {
-        BitmapImage image;
-        public object Convert(object value, Type targetType, object parameter, string language)
-        {
-            byte[] bytesArray = null;
+        //BitmapImage image;
+        //public object Convert(object value, Type targetType, object parameter, string language)
+        //{
+        //    byte[] bytesArray = null;
 
-            if (value != null && value is byte[] && (value as byte[]).Length > 0)
-            {
-                bytesArray = value as byte[];
-            }
-            else
-            {
-                //TODO: Add default Image here
-            }
-            MemoryStream ms = new MemoryStream(bytesArray);
-            var image = ms.AsRandomAccessStream();
-            BitmapImage bi = new BitmapImage();
-            bi.SetSource(image);
-            return ms;
+        //    if (value != null && value is byte[] && (value as byte[]).Length > 0)
+        //    {
+        //        bytesArray = value as byte[];
+        //    }
+        //    else
+        //    {
+        //        //TODO: Add default Image here
+        //    }
+        //    MemoryStream ms = new MemoryStream(bytesArray);
+        //    var image = ms.AsRandomAccessStream();
+        //    BitmapImage bi = new BitmapImage();
+        //    bi.SetSource(image);
+        //    return ms;
             
-        }
+        //}
 
-        public object ConvertBack(object value, Type targetType, object parameter, string language)
-        {
-            throw new NotImplementedException();
-        }
+        //public object ConvertBack(object value, Type targetType, object parameter, string language)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

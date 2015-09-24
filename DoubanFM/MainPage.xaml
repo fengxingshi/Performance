@@ -48,8 +48,10 @@
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical"  Height="119" Width="120"
-                            VerticalAlignment="Top" HorizontalAlignment="Center">
-                                <Image Source="{Binding Image}" Height="120" Width="120"></Image>
+                            VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                                <Image Source="{Binding Image}" Height="120" Width="120"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center">
+                                </Image>
                                 <!--<Border Height="30" Width="120" Background="{Binding PColor}"
                                     VerticalAlignment="Center" HorizontalAlignment="Center">
                                 <TextBlock FontSize="20" Text="{Binding PName}" 
