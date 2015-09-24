@@ -72,22 +72,27 @@
                 </StackPanel>-->
             </GridView>
         </Grid>
-        <Grid Background="White" Grid.Row="3" Grid.Column="1">
-            <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" 
+            
+            <Grid Background="White" Grid.Row="3" Grid.Column="1">
+                <FlipView Grid.Row="0" Grid.Column="0">
+                    <Image Source="Assets\10463QW1-13.jpg"></Image>                    
+                </FlipView>
+                <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" 
                            ItemsSource="{Binding Menus.Menulist}"
                            IsItemClickEnabled="True"
                            behavior:ItemClickCommand.Command="{Binding MenuClickCommand}">
-                <GridView.ItemTemplate>
+                    <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical">
+                            
+                            <StackPanel Orientation="Vertical">
                             <!--<Ellipse x:Name="Ellipse" 
                              Width ="140"
                              Height="140"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
                              Fill="LightGray"
-                             Margin="4,4,4,4"/>-->
-                            <Image Source="{Binding IconImage}" 
+                             Margin="4,4,4,4"/>-->                                
+                                <Image Source="{Binding IconImage}" 
                                            Width="66" Height="66" Margin="4,4,0,4"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"/>
