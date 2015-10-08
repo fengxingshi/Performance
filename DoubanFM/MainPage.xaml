@@ -16,6 +16,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <!--项目头上的图标-->
         <Grid Background="#00b2f0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
@@ -28,6 +29,7 @@
 
             <TextBlock Grid.Column="3" Text="河北财政一体化" FontSize="30" Foreground="White" FontWeight="Bold"/>
         </Grid>
+        
         <Grid Grid.Row="1" Background="Azure">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
@@ -40,14 +42,15 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="20"/>
             </Grid.ColumnDefinitions>
-        <Grid Grid.Row="1" Grid.Column="1">
+            <!--项目集合-->
+            <Grid Grid.Row="1" Grid.Column="1">
                 <GridView Background="#b571cb" Height="auto" Width="auto" Grid.Row="0" 
                       IsItemClickEnabled="True"  IsSwipeEnabled="True" ItemsSource="{Binding Pjs.ProjectList}"
                  behavior:ItemClickCommand.Command="{Binding ButtonClickCommand}"
                       BorderBrush="BurlyWood">
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical"  Height="119" Width="120"
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical"  Height="119" Width="120"
                             VerticalAlignment="Bottom" HorizontalAlignment="Center">
                                 <Image Source="{Binding Image}" Height="120" Width="120"
                                        VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -59,52 +62,53 @@
 
                                 </TextBlock>
                             </Border>-->
-                            
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-                <!--<StackPanel Orientation="Vertical" Background="Red" Height="50" Width="250"
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <!--<StackPanel Orientation="Vertical" Background="Red" Height="50" Width="250"
                             VerticalAlignment="Center" HorizontalAlignment="Right">
                 <TextBlock FontSize="20" Text="{Binding PName}" VerticalAlignment="Center" HorizontalAlignment="Center"
                            >
 
                 </TextBlock>
                 </StackPanel>-->
-            </GridView>
-        </Grid>
-            
+                </GridView>
+            </Grid>
+<!--功能集合-->
             <Grid Background="White" Grid.Row="3" Grid.Column="1">
-                <FlipView Grid.Row="0" Grid.Column="0">
-                    <Image Source="Assets\10463QW1-13.jpg"></Image>                    
-                </FlipView>
+                <!--<FlipView Grid.Row="0" Grid.Column="0">
+                    <Image Source="Assets\10463QW1-13.jpg"></Image>
+                </FlipView>-->
                 <GridView IsSwipeEnabled="True" x:Name="ItemsGridView" 
                            ItemsSource="{Binding Menus.Menulist}"
                            IsItemClickEnabled="True"
                            behavior:ItemClickCommand.Command="{Binding MenuClickCommand}">
                     <GridView.ItemTemplate>
-                    <DataTemplate>
-                            
+                        <DataTemplate>
+
                             <StackPanel Orientation="Vertical">
-                            <!--<Ellipse x:Name="Ellipse" 
+                                <!--<Ellipse x:Name="Ellipse" 
                              Width ="140"
                              Height="140"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
                              Fill="LightGray"
-                             Margin="4,4,4,4"/>-->                                
+                             Margin="4,4,4,4"/>-->
                                 <Image Source="{Binding IconImage}" 
                                            Width="66" Height="66" Margin="4,4,0,4"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"/>
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" 
                                                Text="{Binding MName}" Foreground="CornflowerBlue" 
                                                Margin="4,4,0,4"/>
 
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </Grid>
+
 
         </Grid>
     </Grid>
